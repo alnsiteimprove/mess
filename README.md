@@ -1,2 +1,2 @@
 # mess
-to have fun exploring git
+have fun exploring git :)
