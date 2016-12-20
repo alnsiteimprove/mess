@@ -1,2 +1,2 @@
 # mess
-have fun exploring git :)
+just some useful code examplesm :)
