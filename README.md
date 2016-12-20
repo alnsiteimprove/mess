@@ -1,2 +1,2 @@
 # mess
-just some useful code examplesm :)
+just some useful code examples :)
