@@ -1,0 +1,24 @@
+function log(){  
+  setTimeout(function(){     
+      _sz.analytics.state.tracked = false;
+      _sz.analytics.config.cantrack = true;
+      var q = 
+      var num = 
+      _sz.push(['sw', q]);
+      _sz.push(['hits', num]);
+      _sz.push(['trackpageview']);
+      _sz.push(['notrack', false]);
+  },1000);
+}
+
+if(window.location.href.indexOf('Sok/?q=') > -1){
+  _sz.analytics.config.cantrack = false;
+  _sz.analytics.state.tracked = true;  
+  log();
+  jQuery('').on('mousedown', function () {log();});
+
+	jQuery('').keydown(function (event) {
+			var keycode = (event.keyCode ? event.keyCode : event.which);
+			if(keycode === 13){ log();}
+	});
+}
