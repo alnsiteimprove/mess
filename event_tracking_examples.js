@@ -3,11 +3,10 @@ function log(c, a, l){
 	_sz.push(['event, c, a, l]);
 }
 
-// tracking accordion elements:
-
-
-// tracking navigation buttons:
-
+// tracking clicks on email links, jQuery 
+jQuery(document).on('mousedown', 'a[href^=mailto]', function(){
+	log('Link', 'Email', jQuery(this).text());		  
+});
 
 // tracking scroll events on 25%, 50%, 75% and 100% scrolled:
 var height = jQuery(document).height() - jQuery(window).height();
