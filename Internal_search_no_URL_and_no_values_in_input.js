@@ -4,7 +4,8 @@ function log(c, a, l){
 }
 
 var typingTimer;                //timer identifier
-var doneTypingInterval = 1500;  //time in ms, 1.5 second for example
+var doneTypingInterval = 1500;  //time in ms, 1.5 second for example, must be bigger than sendValuesTimeout
+var sendValuesTimeout = 1300;	//time in ms, 1.3 second, must be lower than  doneTypingInterval
 var sw = "";
 
 //on keyup, start the countdown
@@ -21,7 +22,7 @@ function doneTyping () {
             var num = document.getElementsByClassName('search-results')[0].getElementsByTagName('h3').length>0 ?  document.getElementsByClassName('search-results')[0].getElementsByTagName('h3')[0].innerText.match(/\d+/g)[2] : 0;
             log('Search', 'search word: ' + sw,'search results: ' + num);
         }
-    }, 1300);
+    }, sendValuesTimeout);
 }
 
 // attach event to input field
