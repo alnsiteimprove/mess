@@ -1,3 +1,12 @@
+if(window.location.href.indexOf('?q=')>0){
+    var q = 
+    var n = 
+    _sz.push(['sw', q]);
+    _sz.push(['hits', n]);
+}
+
+/**** OR ****/
+
 function log(){  
   setTimeout(function(){     
       _sz.analytics.state.tracked = false;
