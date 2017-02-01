@@ -20,7 +20,7 @@ function log(){
   },1000);
 }
 
-if(window.location.href.indexOf('Sok/?q=') > -1){
+if(window.location.href.indexOf('?q=') > -1){
   _sz.analytics.config.cantrack = false;
   _sz.analytics.state.tracked = true;  
   log();
