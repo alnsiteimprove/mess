@@ -15,7 +15,7 @@
  * l - label
  */
 function log(c, a, l){
-	_sz.push(['event, c, a, l]);
+	_sz.push(['event', c, a, l]);
 }
 
 /* tracking clicks on email links (jQuery versions 1.7 and higher)
